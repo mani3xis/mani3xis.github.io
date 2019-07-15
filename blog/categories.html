@@ -1,0 +1,23 @@
+---
+layout: default
+title: Blog categories
+---
+    <section class="blog">
+      <main class="wrap">
+{% for category in site.categories %}
+        <article class="blog-post h-entry">
+          <header>
+            <h2 class="p-category">
+              {% capture category_name %}{{ category | first }}{% endcapture %} {{ category_name }}
+              <a name="{{ category_name | slugize }}"></a>
+            </h2>
+          </header>
+          <table class="e-content">
+{% for post in site.categories[category_name] %}
+            <tr><td style="text-align: right"><time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time></td><td><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></td>
+{% endfor %}
+          </table>
+        </article>
+{% endfor %}
+      </main>
+    </section>

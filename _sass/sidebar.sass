@@ -1,0 +1,185 @@
+// =====================================================================
+// STICKY SIDEBAR
+// =====================================================================
+
+.sidebar
+	padding: 40px 25px
+	background-color: $theme-color3
+
+	// Gradient overlay over the whole sidebar (and <canvas> in the near future)
+	&-overlay
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+
+	// Container for sidebar's content
+	&-content
+		position: relative
+		text-align: center
+
+	&-title
+		display: block
+		font-family: $primary-font
+		font-weight: 500
+		font-size: 25px
+		color: $theme-color4
+		text-decoration: underline
+
+		&:hover
+			color: #fff
+
+	&-tagline
+		font-family: $secondary-font
+		font-size: 16px
+		color: $theme-color1
+
+	.menu ul
+		list-style: none
+		margin: 0 auto
+		padding: 8px 20px 0
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+
+		li
+			//flex: 1
+			color: $theme-color4
+			padding: 0 8px
+
+			a
+				font-size: 18px
+				font-weight: 400
+				color: fade-out(#fff, .7)
+				padding: 10px 0
+
+				&:hover
+					color: #fff
+
+				&.active-link
+					color: #fff
+					font-weight: 600
+
+	.socials
+		margin: 0
+		padding: 0
+		display: flex
+		list-style: none
+		justify-content: center
+
+		li
+			padding: 0 4px
+
+			a
+				color: rgba(255, 255, 255, .7)
+				padding: 4px
+				text-align: center
+				font-size: 24px
+
+				&:hover
+					background: #fff
+					color: $term-dark-black
+
+.page
+	clear: both
+	width: 100%
+	transition: all .3s ease-in-out
+	background-color: lighten($term-bright-white, 16%)
+
+
+@media only screen and (min-width:768px)
+	.sidebar
+		padding: 50px 40px 20px
+
+		&-title
+			font-size: 30px
+
+		&-tagline
+			font-size: 17px
+
+		.menu ul
+			padding: 12px 20px
+
+		.socials li a
+			font-size: 28px
+
+
+// Starting with 1K put the ".sidebar" on the side + enable gradient
+@media only screen and (min-width:1024px)
+	.sidebar
+		position: fixed
+		z-index: 10
+		overflow: auto
+		top: 0
+		left: 0
+		bottom: 0
+		width: 30%
+		padding: 0
+
+		&-overlay
+			$gradient-color: #161616
+			$gradient-stop-0: fade-out($gradient-color, 1.0) // 0%
+			$gradient-stop-1: fade-out($gradient-color, 0.9) // 5%
+			$gradient-stop-2: fade-out($gradient-color, 0.3) // 70%
+			background: linear-gradient(to bottom, $gradient-stop-0 0%, $gradient-stop-1 5%, $gradient-stop-2 70%, $gradient-stop-2 100%)
+
+		&-content
+			position: absolute
+			bottom: 0
+			padding: 30px 24px
+			text-align: right
+
+		.menu
+			margin-top: 30px
+
+			ul
+				margin: 0
+				padding: 0
+				display: block
+
+				li
+					border-right: solid 3px $theme-color5
+					padding-left: 16px
+					padding-right: 4px
+					margin-top: 5px
+
+					a
+						padding: 0
+						font-size: 17px
+
+		.socials
+			margin-top: 30px
+			justify-content: flex-end
+
+			li a
+				font-size: 32px
+
+	.page
+		padding-left: 30%
+
+
+@media only screen and (min-width:1220px)
+	.sidebar
+		&-title
+			font-size: 35px
+
+		&-tagline
+			font-size: 18px
+
+		.menu
+			margin-top: 30px
+
+			la a
+				font-size: 18px
+
+	.socials
+		margin-top: 35px
+
+
+@media only screen and (min-width:1600px)
+	.sidebar
+		width: 25%
+
+	.page
+		padding-left: 25%

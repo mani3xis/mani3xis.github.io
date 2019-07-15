@@ -1,0 +1,108 @@
+p, ol, ul
+	font-size: 16px
+	font-weight: 400
+	line-height: 1.5
+	letter-spacing: 0
+
+p > a
+	border-bottom: 1px solid fade-out($term-dark-blue, 0.7)
+
+.blog
+	margin-top: 0
+	padding: 20px 0 0
+
+.blog-post
+	margin-top: 40px
+
+	&:first-child
+		margin-top: 0
+
+	header
+		h2 > a
+			color: $term-dark-black
+
+		p
+			margin-top: 5px
+			color: #ABB7B7
+
+		.e-content
+			margin-top: 20px
+
+.wrap
+	position: relative
+	margin: 0 auto
+	padding: 0 20px
+
+// Currently Jekyll supports pagination only for blog posts (the `_posts/` directory).
+// To add pagination to user collections there is a `jekyll-paginate-v2` plugin,
+// however Github Pages has not whitelisted it rendering it unusable.
+//
+// At this moment we have a rather naive pagination system that allows us
+// to open only the next and previous posts (if available).
+.pagination
+	margin-top: 0
+	padding: 40px 0px
+	display: flex
+	align-items: center
+
+	.mid
+		flex: 1
+		text-align: center
+		min-width: 16px
+
+
+@media only screen and (min-width:768px)
+	p, ol, ul
+		font-size: 18px
+
+	.blog
+		padding: 35px 0 0
+
+	.blog-post
+		margin-top: 60px
+
+		.e-content
+			margin-top: 25px
+
+	.wrap
+		padding: 0 40px
+
+	.pagination
+		padding: 55px 0
+
+
+@media only screen and (min-width:1024px)
+	.blog
+		padding: 35px 40px 0
+
+	.blog-post
+		margin-top: 80px
+
+		.e-content
+			margin-top: 30px
+
+			p .button
+				margin-top: 10px
+
+	.wrap
+		padding: 0
+
+	.pagination
+		padding: 75px 0
+
+
+@media only screen and (min-width:1220px)
+	p, ol, ul
+		font-size: 20px
+
+	.blog
+		padding: 53px 60px 0
+
+	.blog-post
+		margin-top: 100px
+
+		.e-content
+			margin-top: 40px
+
+	.pagination
+		padding: 93px 0

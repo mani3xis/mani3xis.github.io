@@ -1,0 +1,148 @@
+// Style override for Pygments and Rouge syntax highlighters.
+// It tries to use the "terminal colors" as close as my Vim.
+
+code, pre
+	font-family: $snippet-font
+	overflow: auto
+
+.highlight
+	background: $term-dark-black
+	color: $term-bright-white
+	padding: 10px
+	line-height: 1.2
+	font-size: 15px
+
+	.hll
+		background-color: #ffc
+
+	// Errors
+	.err
+		border: 1px solid red
+
+	// Comments
+	.c, .c1, .cm, .cs
+		color: $term-dark-white
+		font-style: italic
+
+	// Keywords & operator words
+	.k, .kc, .kd, .kp, .kr, .ow
+		color: $term-bright-red
+		font-weight: 700
+
+	// Type names
+	.kt
+		color: $term-bright-yellow
+	
+	// Namespaces
+	.kn
+		color: $term-bright-blue
+		font-weight: 700
+
+	// Operators
+	.o
+		color: $term-dark-white
+
+	// Preprocessor
+	.cp
+		color: $term-bright-cyan
+
+	// Number literals
+	.m, .mf, .mi, .mb, .mo, .mh
+		color: $term-bright-purple
+
+	// String literals
+	.s, .sa, .sb, .sc, .s1, .s2, .dl, .sx, .sr, .ss
+		color: $term-bright-green
+
+	// Doc-strings
+	.sd, .sh
+		color: $term-bright-green
+		font-style: italic
+
+	// Strings (escaped)
+	.se
+		color: $term-bright-orange
+		font-weight: 700
+
+	// Interpolation strings
+	.si
+		color: $term-dark-orange
+		font-style: italic
+
+	// Function names
+	.nf
+		color: $term-bright-cyan
+
+	// Decorators
+	.nd
+		color: $term-bright-yellow
+		font-weight: 700
+
+	// Names (built-in)
+	.nb, .bp
+		color: $term-bright-orange
+
+	// Names (default color)
+	.na, .nb, .no, .ne, .nx, .py, .nv
+		color: $term-bright-white
+
+	// Names (default color, bold)
+	.nc, .ni, .nl, .nn, .nt
+		color: $term-bright-white
+		font-weight: 700
+
+	// Whitespace
+	.w
+		color: $term-dark-white
+
+
+.highlight .gd
+	color: #A00000
+
+.highlight .ge
+	font-style: italic
+
+.highlight .gr
+	color: red
+
+.highlight .gh
+	color: navy
+	font-weight: 700
+
+.highlight .gi
+	color: #00A000
+
+.highlight .go
+	color: #888
+
+.highlight .gp
+	color: #c65d09
+	font-weight: 700
+
+.highlight .gs
+	font-weight: 700
+
+.highlight .gu
+	color: purple
+	font-weight: 700
+
+.highlight .gt
+	color: #04d
+
+.highlight .fm
+	color: #06287e
+
+.highlight .vc
+	color: #bb60d5
+
+.highlight .vg
+	color: #bb60d5
+
+.highlight .vi
+	color: #bb60d5
+
+.highlight .vm
+	color: #bb60d5
+
+.highlight .il
+	color: #40a070

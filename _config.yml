@@ -1,0 +1,62 @@
+# Site settings
+title: mpasin's Programming Adventures
+author: Mariusz Pasinski
+tagline: GPU-oriented polyglot developer crafting software since 2008
+description: Personal tech-blog where I share my adventures and thoughts on programming.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://mani3xis.github.io"
+
+# Build settings
+encoding: utf-8
+markdown: kramdown
+highlighter: rouge
+
+collections:
+  posts:
+    output: true
+    permalink: /blog/:categories/:year/:month/:day/:title/
+
+# Post pagination settings
+paginate: 12
+paginate_path: "/blog/page:num"
+
+# Main navigation links
+menu_links:
+  - label: Blog
+    url: /blog/
+
+# Links to social profiles
+socials:
+  linkedin:
+    title: LinkedIn
+    url: https://linkedin.com/in/mariusz-pasinski
+    icon: fa-linkedin
+  github:
+    title: GitHub
+    url: https://github.com/mani3xis
+    icon: fa-github
+  twitter:
+    title: Twitter
+    url: https://twitter.com/mani3xis
+    icon: fa-twitter
+
+# Plugins available on Github Pages (first 9 cannot be disabled)
+# https://help.github.com/en/articles/configuring-jekyll-plugins
+plugins:
+  - jekyll-coffeescript
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-paginate
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+#  - jekyll-avatar
+  - jemoji
+  - jekyll-mentions
+#  - jekyll-include-cache

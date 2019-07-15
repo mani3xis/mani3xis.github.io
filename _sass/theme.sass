@@ -1,0 +1,48 @@
+// Basic color palette for blog
+$base-color: #00e3ff
+$accent-color: complement($base-color)
+
+$primary-darkest:   change-color($base-color, $saturation: 22%, $lightness: 21%)
+$primary-dark:      change-color($base-color, $saturation: 24%, $lightness: 32%)
+$primary-bright:    change-color($base-color, $saturation: 37%, $lightness: 81%)
+$primary-brightest: change-color($base-color, $saturation: 0%,  $lightness: 94%)
+$accent-darkest:   change-color($accent-color, $saturation: 22%, $lightness: 21%)
+$accent-dark:      change-color($accent-color, $saturation: 24%, $lightness: 32%)
+$accent-bright:    change-color($accent-color, $saturation: 37%, $lightness: 81%)
+$accent-brightest: change-color($accent-color, $saturation: 0%,  $lightness: 94%)
+
+
+// Fonts
+$primary-font: 'Libre Baskerville', Verdana, serif
+$secondary-font: 'Montserrat', Tahoma, Geneva, sans-serif
+$snippet-font: 'Inconsolata', monospace
+
+
+// Gruvbox dark theme for syntax highlighting
+// Based on: https://github.com/morhetz/gruvbox#dark-mode-1
+$term-dark-black:  #282828
+$term-dark-red:    #cc241d
+$term-dark-green:  #98971a
+$term-dark-yellow: #d79921
+$term-dark-blue:   #458588
+$term-dark-purple: #b16286
+$term-dark-cyan:   #689d6a
+$term-dark-white:  #a89984
+$term-dark-orange: #d65d0e
+$term-bright-black:  #928374
+$term-bright-red:    #fb4934
+$term-bright-green:  #b8bb26
+$term-bright-yellow: #fabd2f
+$term-bright-blue:   #83a598
+$term-bright-purple: #d3869b
+$term-bright-cyan:   #8ec07c
+$term-bright-white:  #ebdbb2
+$term-bright-orange: #fe8019
+
+
+// COLOR PALETTE BASED ON GRUVBOX
+$theme-color1: $term-bright-white
+$theme-color2: $term-bright-black
+$theme-color3: $term-dark-black
+$theme-color4: $term-bright-yellow
+$theme-color5: $term-bright-orange

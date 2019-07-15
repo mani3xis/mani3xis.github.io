@@ -1,0 +1,24 @@
+  <header class="sidebar">
+    <div class="sidebar-overlay"></div>
+    <div class="sidebar-content">
+      <a href="/" class="sidebar-title">{{ site.author }}</a>
+      <span class="sidebar-tagline">{{ site.tagline }}</span>
+      <nav class="menu">
+        <ul>
+{% for link in site.menu_links %}
+{% capture link_class %}{% if page.url contains link.url %}active-link{% else %}{% endif %}{% endcapture%}
+          <li><a href="{{ link.url }}" class="{{ link_class }}">{{ link.label }}</a></li>
+{% endfor %}
+        </ul>
+      </nav>
+      <ul class="socials">
+{% for social in site.socials %}
+        <li>
+          <a href="{{ social[1].url }}" target="_blank" title="{{ social[1].title }}">
+            <i class="fab {{ social[1].icon }}" aria-hidden="true"></i>
+          </a>
+        </li>
+{% endfor %}
+      </ul>
+    </div>
+  </header>

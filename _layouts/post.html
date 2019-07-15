@@ -1,0 +1,32 @@
+---
+layout: default
+---
+    <section class="blog">
+      <main class="wrap">
+        <article class="blog-post h-entry">
+          <header>
+            <h2 class="p-name"><a href="{{ page.url }}">{{ page.title }}</a></h2>
+            <p>
+              published <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
+              in {% for category in page.categories %}<a href="/blog/categories.html#{{ category | slugize }}" class="p-category">{{ category }}</a> {% endfor %}
+            </p>
+          </header>
+          <section class="e-content">
+{{ content }}
+          </section>
+        </article>
+        <section class="pagination">
+{% if page.previous %}
+          <div class="">
+            <a href="{{ page.previous.url }}" class="button">&laquo; {{ page.previous.title }}</a>
+          </div>
+{% endif %}
+          <div class="mid"></div>
+{% if page.next %}
+          <div class="">
+            <a href="{{ page.next.url }}" class="button">{{ page.next.title }} &raquo;</a>
+          </div>
+{% endif %}
+        </section>
+      </main>
+    </section>
