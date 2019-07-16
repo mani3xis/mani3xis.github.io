@@ -61,6 +61,7 @@ blockquote
 	color: $theme-color3
 	border-left: solid 6px $theme-color2
 	padding: 10px
+	margin: 0
 
 // Headings
 h1, h2, h3, h4, h5
@@ -136,6 +137,9 @@ table
 
 
 @media only screen and (min-width:768px)
+	blockquote
+		margin: revert
+
 	h1, h2
 		font-size: 35px
 
