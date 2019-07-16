@@ -32,10 +32,13 @@ header, footer, section
 
 // Scale embedabble elements
 img, video, audio
-	max-width: 100%
+	// FIXME: Currently there is no better way to center the image.
+	// I guess we have to wait for the CSS4's ``:has()`` selector.
+	width: 100%
 	height: auto
+	max-height: 550px
 	margin: 0 auto
-	// TODO: Center the image
+	object-fit: scale-down
 
 // Hyperlinks
 a
@@ -116,6 +119,9 @@ table
 	// Make even rows a little darker
 	tr:nth-child(even)
 		background: fade-out($term-bright-blue, 0.85)
+
+hr
+	opacity: 0.3
 
 // Site footer
 .footer
