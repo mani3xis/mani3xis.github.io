@@ -24,6 +24,8 @@ paginate_path: "/blog/page:num"
 menu_links:
   - label: Blog
     url: /blog/
+  - label: Portfolio
+    url: /portfolio/
 
 # Links to social profiles
 socials:

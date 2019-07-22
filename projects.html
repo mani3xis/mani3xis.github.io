@@ -1,0 +1,33 @@
+---
+layout: default
+title: Stuff I've made
+permalink: /portfolio/
+---
+    <section class="blog">
+      <main class="wrap">
+        <article class="blog-post">
+          <header><h1>Programming</h1></header>
+{% for project in site.data.portfolio %}
+          <section class="e-content">
+            <a name="{{ project.anchor | default: '#' }}"></a>
+            <h3>{{ project.title }}</h3>
+{% if project.image %}
+            <img src="{{ project.image }}" alt="Screenshot">
+{% elsif project.video %}
+            <video autoplay loop controls>
+              <source src="{{ project.video }}" type="video/mp4">
+            </video>
+{% endif %}
+            <p>{{ project.description }}</p>
+{% if project.url %}
+            <a href="{{ project.url }}" target="_blank" rel="noopener">Link</a>
+{% endif %}
+{% if project.technologies %}
+            <p>Used technologies: {{ project.technologies }}.</p>
+{% endif %}
+          </section>
+          {% if forloop.last == false %}<hr>{% endif %}
+{% endfor %}
+        </article>
+      </main>
+    </section>

@@ -1,0 +1,116 @@
+- title: Direct3D 12 & Vulkan rendering engine
+  image: /assets/images/portfolio/d3d12_island.png
+  anchor: rust-engine
+  description: >-
+    New rendering engine written entirely in <a href="https://www.rust-lang.org/">Rust</a> that has been in development while learning Direct3D 12, making sure it also works on Vulkan which I've learned recently.
+  technologies: Windows API, Direct3D 12, Vulkan, Dear ImGui
+
+- title: Virtual Drum-kit with ManusVR gloves
+  anchor: vr-drums
+  video: /assets/images/portfolio/vr-drum-kit.mp4
+  description: >-
+    After finishing my master's thesis I had a couple of hours left to play with the VR gear.
+  technologies: Unity3D, SteamVR, HTC Vive, Vive Tracker
+
+- title: VR Training Simulator with ManusVR gloves
+  anchor: vr-masters-thesis
+  image: /assets/images/portfolio/vr-finger-tracking.jpg
+  description: >-
+    The goal of my master's thesis was to create a VR simulator for practicing various routines, often requiring interactions with tiny objects.
+  technologies: SDL2, GLM, OpenGL 4.3 Core, ManusVR, HTC Vive, Vive Trackers, OpenVR
+
+- title: VR hand controller demo
+  anchor: vr-bullet-hand
+  image: /assets/images/portfolio/vr-bullet-hand-model.png
+  description: >-
+    Pre-production application developed during my master's thesis while waiting for HTC Vive.
+    It read all the sensor data from ManusVR glove to control the virtual hand.
+    The main goal of this application was to prepare a rock-solid and precise hand model.
+  technologies: bullet3, ManusVR
+
+- title: Vice City 1 Draw Call Renderer
+  anchor: gta-draw-call
+  url: https://github.com/mani3xis/gta-draw-call
+  video: /assets/images/portfolio/gta-draw-call.mp4
+  description: >-
+    The main goal was to render the whole Vice City in just one draw-call, which many said its impossible.
+    Once finished, this project was also used to learn modern graphics APIs, like Direct3D 12 and Vulkan by porting this renderer to those APIs.
+    This renderer has also been ported to PlayStation 3 (but it used more than 1 draw call) -- nevertheless, it was a great learning opportunity.
+  technologies: SDL2, GLM, OpenGL 4.5 Core, Vulkan, Direct3D 12, premake5
+
+- title: 4096 Skeletal animated instances
+  anchor: skeletal-animation
+  image: /assets/images/portfolio/demo-4k-anims.jpg
+  description: >-
+    Custom data-oriented skeletal animation compression algorithm with efficient player built on-top of custom work-stealing task scheduler.
+  technologies: SDL2, OpenGL 3.3 Core, Assimp, stb_image
+
+- title: Monte Carlo 3D mesh volume calculator
+  anchor: monte-carlo-volume
+  image: /assets/images/portfolio/mc-volume-integrator.jpg
+  description: >-
+    The assignment was to create a Matlab script (or console application) to load a 3D mesh and estimate it's volume, but this one ended up with lots of extra features, like node-based editor with live preview, CSG support, Spline-based revolution solids just to name a few.
+  technologies: SDL2, GLM, OpenGL 3.3 Core, Dear ImGUI, Assimp
+
+- title: Landmark-based face swapper
+  anchor: face-swap
+  image: /assets/images/portfolio/cv-face-swap.jpg
+  description: >-
+    Application co-developed with a friend of mine as one of the assignments.
+    It swapped the faces of people in real-time, either from camera-input or pre-recorded movie.
+  technologies: OpenCV, dlib
+
+- title: Raytracer
+  anchor: first-raytracer
+  video: /assets/images/portfolio/raytracer-xfade.mp4
+  description: >-
+    Started as an exercise... but it quickly received some extra features like Microfacet BRDF with GGX NDF, fullscreen post-processing effects, data-driven XML formats and GPU acceleration via OpenCL.
+  technologies: SDL2, GLM, pugixml, OpenCL
+
+- title: Modular polyphonic soft-synth
+  anchor: first-synth
+  image: /assets/images/portfolio/dsp-modular-synth.png
+  description: >-
+    My first polyphonic software synthesizer with basic MIDI support.
+  technologies: SDL2, Dear ImGUI, rtmidi
+
+- title: Point-cloud me
+  anchor: kinect-3d-scan
+  image: /assets/images/portfolio/kinect-point-cloud-me.png
+  description: >-
+    What can you do after you borrow an Xbox Kinect camera?
+    I tried to play with the depth image and motion tracking in order to 3D scan myself.
+    The results where not impressive due to not-high-enough resolution, yet very exciting experiment!
+
+- title: Shuriken Game Engine
+  anchor: shuriken-engine
+  description: >-
+    This was the engine that powered the submission for Szczecin Gamedev Talents 2015.
+    It had fully-featured asset processing pipeline with highly-optimized binary formats, data-driven renderer with automatic batching.
+    Games could be written in Lua 5.1 and MoonScript.
+    While the final game has been downgraded to forward rendering, the engine supports deferred rendering.
+  technologies: SDL2, OpenGL, GLM, LuaJIT 2, Bullet Physics, Assimp, OpenAL, premake
+
+- title: Submission for Szczecin Gamedev Talents 2015
+  anchor: stuntman
+  video: /assets/images/portfolio/game-stuntman.mp4
+  description: >-
+    A cross-platform, time-trial racing game developed for 8<sup>th</sup> Szczecin Gamedev Talents competition.
+    The only requirement was to use only hand-crafted rendering engines.
+    Unfortunatelly the target PC was not powerful enough forcing me to remove some effects.
+    It also had a stunt mode where users where allowed to build their own levels using built-in editor and then play on them.
+    During the 2 month period this game had multiple variations and iterations.
+  technologies: SDL2, OpenGL, GLM, LuaJIT 2, Bullet Physics, Assimp, premake, Blender
+
+- title: Yet Another Minecraft Clone
+  anchor: minecraft-clone
+  image: /assets/images/portfolio/game-yamc.png
+  description:
+  technologies: PyOpenGL
+
+- title: Frame OS
+  anchor: frame-os
+  description: >-
+    A very simple protected-mode kernel, first written in FASM and then in C.
+    It booted entirely from a 3.5" floppy disk and supported only the FAT12 file system.
+    Unfortunatelly the VESA 3 driver was never finished and the project has been basically dropped.
